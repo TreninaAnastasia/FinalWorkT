@@ -22,3 +22,23 @@ static string[] Main ( string first, string second, string third)
     string[] array = list.ToArray();
     return array;
 }
+
+static void SecondArray( string[] Array)
+{
+    int count = 0;
+    string[] secondArray = new string[Array.Length];
+    for (int i = 0; i < Array.Length; i++)
+    {
+        if ( Array[i].Length < 3)
+        {
+            secondArray[count] = Array[i];
+            count += 1;
+        }
+        else if (Array[i].Length == 3)
+        {
+            secondArray[count] = Array[i];
+            count += 1;
+        }
+    }
+    Console.WriteLine(String.Join(" ", secondArray));
+}
